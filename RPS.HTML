@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html></html>
+
+<script>
+const weapons = ["rock", "paper", "scissors"];
+const computerPlay = weapons[Math.floor(Math.random() * weapons.length)];
+
+
+function playRound (playerSelection, computerSelection) {
+
+
+if (playerSelection == "paper" && computerSelection == "rock") return ("player wins!")
+    else if (playerSelection == "rock" && computerSelection == "scissors") return ("player wins!")
+    else if (playerSelection == "scissors" && computerSelection == "paper") return ("player wins!")
+    else if (playerSelection === computerSelection) return ("it's a tie")
+    else return ("computer wins!")
+}
+
+function areEqual () { weapons.toUpperCase() === weapons.toUpperCase(); }
+
+
+console.log("Computer chose =>", computerPlay)
+const playerSelection = prompt("what's your selection?")
+console.log(areEqual())
+const computerSelection = computerPlay
+console.log(playRound(playerSelection, computerSelection))
+</script>
